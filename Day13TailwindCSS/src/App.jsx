@@ -1,34 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Detail from "./pages/Detail";
+import FirstPage from "./pages/FirstPage";
+import Home from "./pages/Home";
+import SecondPage from "./pages/SecondPage";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
-}
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/firstpage" element={<FirstPage />} />
+        <Route path="/secondpage" element={<SecondPage />} />
+        <Route
+          path="*"
+          element={<h1 className=" text-red-700">Error 404 Page Not Found!</h1>}
+        />
+        <Route path="/secondpage/:id" element={<Detail />} />
+        <Route
+          path="/secondpage/:*"
+          element={<h1 className=" text-red-700">Error 404 Page Not Found!</h1>}
+        />
+      </Routes>
+    </>
+  );
+};
 
-export default App
+export default App;
