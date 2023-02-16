@@ -1,0 +1,46 @@
+{
+  "customer": [
+    {
+      "id": 1,
+      "name": "mg mg",
+      "password": 12345
+    },
+    {
+      "id": 1,
+      "name": "soe thu",
+      "password": 23456
+    },
+    {
+      "id": 2,
+      "name": "kyaw ko",
+      "password": 34567
+    }
+  ],
+  "bank": [
+    {
+      "id": 1,
+      "name": "jkl00",
+      "phone": "090000"
+    },
+    {
+      "id": 2,
+      "name": "KBZ ",
+      "phone": "012345"
+    },
+    {
+      "id": 3,
+      "name": "AGD Bank",
+      "phone": "09090909"
+    },
+    {
+      "id": 4,
+      "name": "KKKK",
+      "phone": "677678"
+    },
+    {
+      "id": 5,
+      "name": "AAAAA",
+      "phone": "23455"
+    }
+  ]
+}
